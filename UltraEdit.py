@@ -17,6 +17,19 @@ def tensor2pil(image):
 def pil2tensor(image):
     return torch.from_numpy(np.array(image).astype(np.float32) / 255.0).unsqueeze(0)
 
+def resize_to_closest_area(image, target_area=512*512):
+    original_width, original_height = image.size
+    original_area = original_width * original_height
+
+    # 计算缩放比例
+    scale = (target_area / original_area) ** 0.5
+
+    # 根据比例计算新的尺寸
+    new_width = int(original_width * scale)
+    new_height = int(original_height * scale)
+
+    return image.resize((new_width, new_height), Image.ANTIALIAS)
+    
 
 class UltraEdit_ModelLoader_Zho:
     def __init__(self):
@@ -147,12 +160,15 @@ class UltraEdit_Generation_Zho:
 
         generator = torch.Generator(device=device).manual_seed(seed)
         
-        image_t=tensor2pil(image).resize((512, 512))
+        image_t=tensor2pil(image)
+        image_resized = resize_to_closest_area(image_t, 512*512)
         
         if mask is None:
             mask_t = Image.new("RGB", image_t.size, (255, 255, 255))
+            mask_resized = resize_to_closest_area(mask_t, 512*512)
         else:
-            mask_t = tensor2pil(mask).resize((512, 512))
+            mask_t = tensor2pil(mask)
+            mask_resized = resize_to_closest_area(mask_t, 512*512)
         
         output = pipe(
             prompt=positive,
