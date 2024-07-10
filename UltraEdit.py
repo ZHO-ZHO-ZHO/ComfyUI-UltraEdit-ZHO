@@ -173,8 +173,8 @@ class UltraEdit_Generation_Zho:
         output = pipe(
             prompt=positive,
             negative_prompt=negative,
-            image=image_t,
-            mask_img=mask_t,
+            image=image_resized,
+            mask_img=mask_resized,
             num_inference_steps=steps,
             image_guidance_scale=image_guidance_scale,
             guidance_scale=text_guidance_scale,
