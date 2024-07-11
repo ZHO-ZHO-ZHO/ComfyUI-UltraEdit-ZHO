@@ -1,0 +1,391 @@
+{
+  "last_node_id": 14,
+  "last_link_id": 16,
+  "nodes": [
+    {
+      "id": 3,
+      "type": "LoadImage",
+      "pos": [
+        1300,
+        530
+      ],
+      "size": {
+        "0": 420,
+        "1": 520
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            2
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [],
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "ComfyUI_temp_abqoy_00001_.png",
+        "image"
+      ]
+    },
+    {
+      "id": 9,
+      "type": "LoadImage",
+      "pos": [
+        1300,
+        1100
+      ],
+      "size": {
+        "0": 420,
+        "1": 510
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            9
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [
+            11
+          ],
+          "shape": 3,
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "clipspace/clipspace-mask-971855.799999997.png [input]",
+        "image"
+      ]
+    },
+    {
+      "id": 8,
+      "type": "UltraEdit_Generation_Zho",
+      "pos": [
+        980,
+        1140
+      ],
+      "size": {
+        "0": 300,
+        "1": 470
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "pipe",
+          "type": "UEMODEL",
+          "link": null,
+          "slot_index": 0
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 9,
+          "slot_index": 1
+        },
+        {
+          "name": "mask",
+          "type": "IMAGE",
+          "link": 12
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            14
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UltraEdit_Generation_Zho"
+      },
+      "widgets_values": [
+        "change to a panda",
+        "worst quality, low quality",
+        50,
+        1.5,
+        7.5,
+        684333505729569,
+        "randomize"
+      ]
+    },
+    {
+      "id": 12,
+      "type": "PreviewImage",
+      "pos": [
+        1740,
+        1100
+      ],
+      "size": {
+        "0": 490,
+        "1": 510
+      },
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 14
+        }
+      ],
+      "title": "UltraEdit w/ Mask",
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 11,
+      "type": "PreviewImage",
+      "pos": [
+        1740,
+        530
+      ],
+      "size": {
+        "0": 490,
+        "1": 520
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 13
+        }
+      ],
+      "title": "UltraEdit w/o Mask",
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 4,
+      "type": "MaskToImage",
+      "pos": [
+        980,
+        1050
+      ],
+      "size": {
+        "0": 300,
+        "1": 40
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 11,
+          "slot_index": 0
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            12
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MaskToImage"
+      }
+    },
+    {
+      "id": 1,
+      "type": "UltraEdit_Generation_Zho",
+      "pos": [
+        980,
+        640
+      ],
+      "size": {
+        "0": 300,
+        "1": 360
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "pipe",
+          "type": "UEMODEL",
+          "link": 16,
+          "slot_index": 0
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 2,
+          "slot_index": 1
+        },
+        {
+          "name": "mask",
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            13
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UltraEdit_Generation_Zho"
+      },
+      "widgets_values": [
+        "change to a dog",
+        "worst quality, low quality",
+        50,
+        1.5,
+        7.5,
+        367823626415557,
+        "randomize"
+      ]
+    },
+    {
+      "id": 14,
+      "type": "UltraEdit_ModelLoader_local_Zho",
+      "pos": [
+        980,
+        530
+      ],
+      "size": [
+        298.6793570457819,
+        58
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "pipe",
+          "type": "UEMODEL",
+          "links": [
+            16
+          ],
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UltraEdit_ModelLoader_local_Zho"
+      },
+      "widgets_values": [
+        "transformer/diffusion_pytorch_model.safetensors"
+      ]
+    }
+  ],
+  "links": [
+    [
+      2,
+      3,
+      0,
+      1,
+      1,
+      "IMAGE"
+    ],
+    [
+      9,
+      9,
+      0,
+      8,
+      1,
+      "IMAGE"
+    ],
+    [
+      11,
+      9,
+      1,
+      4,
+      0,
+      "MASK"
+    ],
+    [
+      12,
+      4,
+      0,
+      8,
+      2,
+      "IMAGE"
+    ],
+    [
+      13,
+      1,
+      0,
+      11,
+      0,
+      "IMAGE"
+    ],
+    [
+      14,
+      8,
+      0,
+      12,
+      0,
+      "IMAGE"
+    ],
+    [
+      16,
+      14,
+      0,
+      1,
+      0,
+      "UEMODEL"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 1,
+      "offset": [
+        -612.3367703034658,
+        -312.0972485616242
+      ]
+    }
+  },
+  "version": 0.4
+}
