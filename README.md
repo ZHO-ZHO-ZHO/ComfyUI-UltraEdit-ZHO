@@ -9,8 +9,14 @@ Unofficial implementation of [UltraEdit](https://github.com/HaozheZhao/UltraEdit
 
 
 
-https://github.com/ZHO-ZHO-ZHO/ComfyUI-UltraEdit-ZHO/assets/140084057/89737bb3-1361-47ec-aec9-2d941d7173d1
 
+https://github.com/ZHO-ZHO-ZHO/ComfyUI-UltraEdit-ZHO/assets/140084057/074ae7a8-3e51-4df0-ae81-b689437c8631
+
+
+
+<!---
+https://github.com/ZHO-ZHO-ZHO/ComfyUI-UltraEdit-ZHO/assets/140084057/89737bb3-1361-47ec-aec9-2d941d7173d1
+--->
 
 
 ## 项目介绍 | Info
@@ -80,11 +86,18 @@ V1.0
     ![screenshot-20240710-032255](https://github.com/ZHO-ZHO-ZHO/ComfyUI-UltraEdit-ZHO/assets/140084057/9651520f-59a2-45ce-ab20-7335dd839007)
 
 
+  - [V1.0 UltraEdit + LatentTravel anne【Zho】](https://github.com/ZHO-ZHO-ZHO/ComfyUI-UltraEdit-ZHO/blob/main/UltraEdit%20Workflows/UltraEdit%20%2B%20LatentTravel%20anne%E3%80%90Zho%E3%80%91.json)：会用到 [ComfyUI_TravelSuite_Zho](https://github.com/ZHO-ZHO-ZHO/ComfyUI_TravelSuite_Zho) 插件
+
+    ![screenshot-20240711-221730](https://github.com/ZHO-ZHO-ZHO/ComfyUI-UltraEdit-ZHO/assets/140084057/d951888a-1de4-403f-a630-259dbb58e3af)
+
+    
 
 
 ## 更新日志
 
 - 20240711
+
+  新增图像编辑渐变视频工作流
 
   修复pil库版本低的问题，已适配最新库
 
