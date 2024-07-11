@@ -63,7 +63,8 @@ Unofficial implementation of [UltraEdit](https://github.com/HaozheZhao/UltraEdit
 
 V1.0
 
-  - [V1.0 UltraEdit global & mask edit](https://github.com/ZHO-ZHO-ZHO/ComfyUI-UltraEdit-ZHO/blob/main/UltraEdit%20Workflows/V1.0%20UltraEdit%20global%20%26%20mask%20edit%E3%80%90Zho%E3%80%91.json)
+  - 加载本地模型：[V1.0 UltraEdit global & mask edit（local）](https://github.com/ZHO-ZHO-ZHO/ComfyUI-UltraEdit-ZHO/blob/main/UltraEdit%20Workflows/V1.0%20UltraEdit%20global%20%26%20mask%20edit%EF%BC%88local%EF%BC%89%E3%80%90Zho%E3%80%91.json)
+  - 自动下载模型：[V1.0 UltraEdit global & mask edit（auto）](https://github.com/ZHO-ZHO-ZHO/ComfyUI-UltraEdit-ZHO/blob/main/UltraEdit%20Workflows/V1.0%20UltraEdit%20global%20%26%20mask%20edit%EF%BC%88auto%EF%BC%89%E3%80%90Zho%E3%80%91.json)
 
     ![screenshot-20240710-032255](https://github.com/ZHO-ZHO-ZHO/ComfyUI-UltraEdit-ZHO/assets/140084057/9651520f-59a2-45ce-ab20-7335dd839007)
 
@@ -71,6 +72,10 @@ V1.0
 
 
 ## 更新日志
+
+- 20240711
+
+  新增 本地模型加载 工作流，分为 本地加载/自动下载 两种
 
 - 20240710
 
