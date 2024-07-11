@@ -28,7 +28,7 @@ def resize_to_closest_area(image, target_area=512*512):
     new_width = int(original_width * scale)
     new_height = int(original_height * scale)
 
-    return image.resize((new_width, new_height), Image.ANTIALIAS)
+    return image.resize((new_width, new_height), Image.LANCZOS)
     
 
 class UltraEdit_ModelLoader_Zho:
