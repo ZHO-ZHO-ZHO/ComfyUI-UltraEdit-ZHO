@@ -8,7 +8,8 @@
 Unofficial implementation of [UltraEdit](https://github.com/HaozheZhao/UltraEdit)（Diffusers） for ComfyUI
 
 
-![screenshot-20240710-033335](https://github.com/ZHO-ZHO-ZHO/ComfyUI-UltraEdit-ZHO/assets/140084057/b10be119-85a4-435b-b68c-cb5dc4b4f3b1)
+
+https://github.com/ZHO-ZHO-ZHO/ComfyUI-UltraEdit-ZHO/assets/140084057/89737bb3-1361-47ec-aec9-2d941d7173d1
 
 
 
@@ -21,6 +22,8 @@ Unofficial implementation of [UltraEdit](https://github.com/HaozheZhao/UltraEdit
     - 模型同时支持 全局编辑 和 区域蒙版编辑
   
 - 版本：V1.0 同时支持 本地模型加载（适合本地）和 自动下载模型（适合云端）
+
+![screenshot-20240710-033335](https://github.com/ZHO-ZHO-ZHO/ComfyUI-UltraEdit-ZHO/assets/140084057/b10be119-85a4-435b-b68c-cb5dc4b4f3b1)
 
 
 
