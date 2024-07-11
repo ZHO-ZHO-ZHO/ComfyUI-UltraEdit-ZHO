@@ -45,6 +45,14 @@ Unofficial implementation of [UltraEdit](https://github.com/HaozheZhao/UltraEdit
 
 
 
+## 使用注意 | Attention
+
+- 输入图像尺寸需是 4 的倍数
+
+- 如果得到的输出是 512 张图而非单张图像，那需要手动将 UltraEdit.py 文件最后的 `output_t = output_t.squeeze(0)` 删除，我自己的测试均未出现这个问题，目前还不清楚是啥原因（估计还是 diffusers 问题）
+
+
+
 ## 安装 | Install
 
 - **注意**：此项目需要特殊的 diffusers 版本，推荐使用虚拟环境或云（避免冲突），可直接通过 requirements 自动安装依赖，也可手动安装：`pip install git+https://github.com/HaozheZhao/UltraEdit.git@main#subdirectory=diffusers`
@@ -74,6 +82,8 @@ V1.0
 ## 更新日志
 
 - 20240711
+
+  新增使用注意
 
   新增 本地模型加载 工作流，分为 本地加载/自动下载 两种
 
