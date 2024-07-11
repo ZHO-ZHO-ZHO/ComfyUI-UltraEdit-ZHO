@@ -1,0 +1,15 @@
+[project]
+name = "comfyui-ultraedit-zho"
+description = "Unofficial implementation of [a/UltraEdit](https://github.com/HaozheZhao/UltraEdit) (Diffusers) for ComfyUI"
+version = "1.0.0"
+license = "LICENSE"
+dependencies = ["git+https://github.com/HaozheZhao/UltraEdit.git@main#subdirectory=diffusers"]
+
+[project.urls]
+Repository = "https://github.com/ZHO-ZHO-ZHO/ComfyUI-UltraEdit-ZHO"
+#  Used by Comfy Registry https://comfyregistry.org
+
+[tool.comfy]
+PublisherId = ""
+DisplayName = "ComfyUI-UltraEdit-ZHO"
+Icon = ""
